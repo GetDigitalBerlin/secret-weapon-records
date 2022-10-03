@@ -13,10 +13,10 @@ router.get("/", async (req, res, next) => {
 
 router.get("/catalog", async (req, res, next) => {
 	try {
-		const { catalog_number } = req.query;
-		const recordsByCatalogNumber =
-			await recordRepository.getRecordsByCatalogNumber(catalog_number);
-		return res.json(recordsByCatalogNumber);
+		const { id } = req.query;
+		const recordsById = await recordRepository.getRecordsById(id);
+
+		return res.json(recordsById);
 	} catch (err) {
 		next(err);
 	}

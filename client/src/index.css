@@ -1,13 +1,47 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Abel&display=swap");
+@font-face {
+	font-family: "Blind";
+	src: url("../public/fonts/blindl__-webfont.woff");
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+	--background: #fbfaf5;
+	--text-primary: #131516;
+	--navMenu: rgba(251, 250, 245, 0.8);
+	--boxShadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+		rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+[data-theme="dark"] {
+	--background: #131516;
+	--text-primary: #fbfaf5;
+	--navMenu: rgba(19, 21, 22, 0.8);
+	--boxShadow: rgba(255, 0, 0, 0.4) 0px 2px 20px,
+		rgba(255, 0, 0, 0.3) 0px 7px 13px -3px,
+		rgba(255, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: url(../public/swr.svg);
+	background-color: var(--background);
+	margin: 0;
+	font-family: "Blind", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	transition: 500ms ease-out;
+}
+
+ul {
+	list-style-type: none;
+}
+
+a {
+	text-decoration: none;
+	color: var(--text-primary);
 }

@@ -2,21 +2,12 @@ const db = require("../db");
 
 getRecordImagesSQL = `SELECT * FROM record_image`;
 
-getRecordsByCatalogNumberSQL = `SELECT
-record_id,
-catalog_number,
-artists,
-album_title,
-track_artists,
-song_titles,
-release_date,
-title_version,
-genre
-FROM record
+getRecordsByIdSQL = `SELECT *
+FROM records
 WHERE 
-catalog_number = $1
+id = $1
 ORDER BY
-record_id
+id
 `;
 
 module.exports = {
@@ -28,12 +19,9 @@ module.exports = {
 			throw Error(error);
 		}
 	},
-	getRecordsByCatalogNumber: async (catalog_number) => {
+	getRecordsById: async (id) => {
 		try {
-			const catalogNumber = catalog_number.toUpperCase();
-			const result = await db.query(getRecordsByCatalogNumberSQL, [
-				catalogNumber,
-			]);
+			const result = await db.query(getRecordsByIdSQL, [id]);
 			return result.rows;
 		} catch (error) {
 			throw Error(error);

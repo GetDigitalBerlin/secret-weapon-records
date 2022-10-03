@@ -1,0 +1,16 @@
+.contact {
+	display: grid;
+	place-items: center;
+	width: 100%;
+	height: calc(100% - 6rem);
+	color: var(--text-primary);
+}
+
+.contact-items {
+	display: grid;
+	place-items: center;
+}
+
+.email {
+	font-size: 2rem;
+}

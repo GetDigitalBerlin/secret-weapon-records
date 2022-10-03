@@ -1,15 +1,16 @@
 BEGIN TRANSACTION;
 
-CREATE TABLE record (
-  record_id SERIAL PRIMARY KEY,
-  catalog_number VARCHAR(255),
-  artists VARCHAR(255),
-  album_title VARCHAR(255),
-  track_artists VARCHAR(255),
-  song_titles VARCHAR(255),
-  release_date DATE,
-  title_version VARCHAR(255),
-  genre VARCHAR(255)
+CREATE TABLE records (
+    catalog_number character varying(255),
+    song_titles json,
+    track_artist json,
+    title_version json,
+    record_id SERIAL PRIMARY KEY,
+    artists character varying(255),
+    album_title character varying(255),
+    release_date date,
+    genre character varying(255),
+    image_name character varying(255)
 );
 
 CREATE TABLE record_image (

@@ -1,0 +1,73 @@
+.about-container {
+	display: -ms-grid;
+	display: grid;
+	-ms-grid-rows: -webkit-min-content;
+	-ms-grid-rows: min-content;
+	grid-template-rows: -webkit-min-content;
+	grid-template-rows: min-content;
+	place-content: center;
+	gap: 2rem;
+	padding: 0 2rem;
+	max-width: 80rem;
+	margin: auto;
+	height: calc(100% - 6rem);
+	text-align: center;
+	color: var(--text-primary);
+}
+
+.about-description {
+	font-family: "Abel", sans-serif;
+}
+
+.about-container .logo .icon {
+	font-size: 5rem;
+	-webkit-animation-name: spin;
+	animation-name: spin;
+	-webkit-animation-duration: 5000ms;
+	animation-duration: 5000ms;
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+	animation-timing-function: linear;
+}
+
+@-webkit-keyframes spin {
+	from {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	to {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes spin {
+	from {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	to {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+
+@media only screen and (min-width: 58rem) {
+	.about-container {
+		max-width: 70%;
+		gap: 4rem;
+	}
+
+	.label-name {
+		margin-top: 2rem;
+		font-size: 5rem;
+	}
+
+	.about-container .logo .icon {
+		font-size: 10rem;
+	}
+	.about-description {
+		font-size: 1.25rem;
+	}
+}

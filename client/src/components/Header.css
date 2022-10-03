@@ -1,0 +1,115 @@
+.navbar {
+	width: 100%;
+	height: 3rem;
+}
+
+.navbar .container {
+	display: -ms-grid;
+	display: grid;
+	place-items: center;
+}
+
+.hamburger {
+	display: none;
+	padding: 1rem;
+	transition: 500ms ease-in-out;
+}
+
+.navbar .nav-menu {
+	height: 100%;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	padding: 1rem;
+}
+.navbar li {
+	padding: 1rem;
+	font-weight: 600;
+	color: var(--text-primary);
+	text-align: bottom;
+}
+
+.navbar .icon {
+	color: var(--text-primary);
+	font-size: 2rem;
+	color: var(--text-primary);
+}
+
+.navbar a {
+	position: relative;
+	color: var(--text-primary);
+	padding-bottom: 0.2rem;
+}
+
+.navbar a::after {
+	content: "";
+	position: absolute;
+	width: 100%;
+	-webkit-transform: scaleX(0);
+	-ms-transform: scaleX(0);
+	transform: scaleX(0);
+	height: 2px;
+	bottom: 0;
+	left: 0;
+	background-color: var(--text-primary);
+	-webkit-transform-origin: bottom right;
+	-ms-transform-origin: bottom right;
+	transform-origin: bottom right;
+	-webkit-transition: -webkit-transform 0.25s ease-out;
+	transition: -webkit-transform 0.25s ease-out;
+	-o-transition: transform 0.25s ease-out;
+	transition: transform 0.25s ease-out;
+	transition: transform 0.25s ease-out, -webkit-transform 0.25s ease-out;
+}
+
+.navbar a:hover:after {
+	-webkit-transform: scaleX(1);
+	-ms-transform: scaleX(1);
+	transform: scaleX(1);
+	-webkit-transform-origin: bottom left;
+	-ms-transform-origin: bottom left;
+	transform-origin: bottom left;
+}
+
+@media only screen and (max-width: 58rem) {
+	.navbar .hamburger {
+		-ms-grid-column-align: end;
+		justify-self: end;
+		display: block;
+		z-index: 15;
+	}
+
+	.navbar .nav-menu {
+		position: absolute;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		width: 100%;
+		height: 100vh;
+		top: 0;
+		left: -100%;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+		background-color: var(--navMenu);
+		-webkit-transition: 0.5s ease-in;
+		-o-transition: 0.5s ease-in;
+		transition: 0.5s ease-in;
+	}
+
+	.navbar .active {
+		left: 0;
+	}
+
+	.navbar li {
+		margin-right: 1rem;
+		font-size: 2rem;
+	}
+}
