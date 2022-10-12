@@ -2,7 +2,7 @@
 	display: grid;
 	place-items: center;
 	width: 100%;
-	height: calc(100% - 6rem);
+	min-height: calc(100% - 6rem);
 	color: var(--text-primary);
 }
 

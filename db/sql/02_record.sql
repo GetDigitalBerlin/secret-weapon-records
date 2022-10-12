@@ -1,4 +1,4 @@
-INSERT INTO "public"."records"("record_id","catalog_number","song_titles","artists","track_artist","album_title","release_date","title_version","genre","image_name")
+INSERT INTO "public"."records"("id","catalog_number","song_titles","artists","track_artist","album_title","release_date","title_version","genre","image_name")
 VALUES
 (1,E'SW001',E'["We Were Somewhere Around Barstow", "We Were Somewhere Around Barstow (L.A. Williams\' Chicago Whoop Azz DJ Mixx)"]',E'Samoan Attorney',E'["Samoan Attorney", "Samoan Attorney"]',E'We Were Somewhere Around Barstow',E'2001-09-05',E'["Original Mix", "L.A. Williams\' Chicago Whoop Azz DJ Mixx"]',E'Electronic - Techno',E'SW001.jpg'),
 (2,E'SW002',E'["Velvet Driveshaft", "The Beater", "Jak Stat"]',E'The Diamond Dogs',E'["The Diamond Dogs", "The Diamond Dogs", "The Diamond Dogs"]',E'The Conception EP',E'2002-11-19',E'["Original Mix", "Original Mix", "Original Mix"]',E'Electronic - Techno',E'SW002.jpg'),

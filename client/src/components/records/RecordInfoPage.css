@@ -3,7 +3,7 @@
 	place-items: center;
 	max-width: 70%;
 	margin: auto;
-	height: calc(100% - 6rem);
+	min-height: calc(100% - 6rem);
 	text-align: center;
 }
 

@@ -2,6 +2,7 @@ import { formatDate } from "../utils/formatDate";
 import { SiSpotify, SiBeatport } from "react-icons/si";
 
 const RecordInfo = ({
+	id,
 	artists,
 	album_title,
 	release_date,
@@ -22,10 +23,10 @@ const RecordInfo = ({
 			/>
 			<li className="record-info">
 				<h2>{album_title}</h2>
-				<p>{artists}</p>
+				<p key={id}>{artists}</p>
 				<ol className="track-info-list">
 					{results.map(({ artist, title }) => (
-						<li className="track-info">
+						<li key={id} className="track-info">
 							{artist} - {title}
 						</li>
 					))}
