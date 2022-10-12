@@ -1,11 +1,11 @@
 BEGIN TRANSACTION;
 
 CREATE TABLE records (
+    id SERIAL PRIMARY KEY,
     catalog_number character varying(255),
     song_titles json,
     track_artist json,
     title_version json,
-    record_id SERIAL PRIMARY KEY,
     artists character varying(255),
     album_title character varying(255),
     release_date date,
