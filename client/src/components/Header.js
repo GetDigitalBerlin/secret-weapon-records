@@ -12,7 +12,7 @@ const Header = () => {
 		<>
 			<header>
 				<nav name="top" className="navbar">
-					<div className="container">
+					<div className="container" onClick={handleNav}>
 						<ul className={nav ? "nav-menu active" : "nav-menu"}>
 							<li>
 								<Link to="/">Home</Link>
