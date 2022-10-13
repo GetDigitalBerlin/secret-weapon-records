@@ -4,6 +4,7 @@
 	position: absolute;
 	-ms-grid-column-align: start;
 	justify-self: start;
+	top: 2%;
 }
 
 .toggleWrapper input {

@@ -9,6 +9,7 @@ const Record = ({ id, name, catalog_number }) => {
 						src={`./img/${name}`}
 						alt={catalog_number}
 						className="record-image"
+						loading="lazy"
 					/>
 				</div>
 				<h3>{catalog_number}</h3>

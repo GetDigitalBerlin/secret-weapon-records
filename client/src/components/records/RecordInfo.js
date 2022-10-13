@@ -20,6 +20,7 @@ const RecordInfo = ({
 				src={`/img/${image_name}`}
 				alt={image_name}
 				className="record-info-image"
+				loading="lazy"
 			/>
 			<li className="record-info">
 				<h2>{album_title}</h2>
